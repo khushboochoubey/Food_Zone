@@ -1,0 +1,102 @@
+/* CSS Reset */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+/* CSS variables */
+:root{
+    --navbar-height:59px;
+}
+/* Navigation Bar */
+#navbar{
+    display: flex;
+    align-items: center;
+    position:relative;
+    top: 0px;
+}
+#navbar::before{
+    content: "";
+    background-color: black;
+    opacity: 0.5;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1; /*content background ke uper aa jayega */
+}
+/* Navigation bar:logo and image */
+#logo{
+    margin: 4px 15px;
+
+}
+#logo img{
+    height: 85px;
+    /* width: 30px; */
+    margin: 7px 10px;
+}
+/* Navigation bar:list styling */
+
+#navbar ul{
+    display: flex;
+    font-family: 'Baloo 2', cursive; 
+}
+
+#navbar ul li{
+    /* color: white; */
+    list-style: none;
+    font-size: 1.3rem;
+}
+#navbar ul li a{
+     display: block; 
+    padding: 3px 22px;
+    border-radius: 10px;
+    text-decoration: none;
+    /* font-weight: bold; */
+    color: white;
+     /* font-family: 'Baloo 2', cursive;  */
+}  
+#navbar ul li a:hover{
+    background-color: white;
+   color: black;
+ }   
+ /* home section */
+#home{
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+   /* font-weight: bold; */
+    height: 400px; 
+    justify-content: center;
+    align-items: center;
+    /* justify-content se poora center hoga or align-items se udke andar bala center hoga */
+}
+#home::before{
+    content: "";
+    position: absolute;
+    background: url('food2.jpg') no-repeat center center/cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity:3;
+    left: 0px;
+    top: 0px;
+    
+}
+#home h1{
+    color: white;
+    text-align: center;
+     font-family: 'Baloo 2', cursive; 
+}
+#home p{
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    /* rem : relative to root element/html element */
+    font-family: 'Baloo 2', cursive; 
+}
+#btn{
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color: brown;
+}
